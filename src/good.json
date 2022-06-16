@@ -1,0 +1,184 @@
+{
+  "response": {
+    "status": "ok",
+    "userTier": "developer",
+    "total": 132804,
+    "startIndex": 1,
+    "pageSize": 10,
+    "currentPage": 1,
+    "pages": 13281,
+    "orderBy": "newest",
+    "results": [
+      {
+        "id": "uk-news/2022/jun/16/queen-seabed-rights-swell-value-5bn-auction-windfarm-plots-crown-estate",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T23:01:43Z",
+        "webTitle": "Queen’s ‘seabed rights’ swell to value of £5bn after auction of plots",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/16/queen-seabed-rights-swell-value-5bn-auction-windfarm-plots-crown-estate",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/16/queen-seabed-rights-swell-value-5bn-auction-windfarm-plots-crown-estate",
+        "fields": {
+          "headline": "Queen’s ‘seabed rights’ swell to value of £5bn after auction of plots",
+          "thumbnail": "https://media.guim.co.uk/a533428c79d4eb7a08af29509e4fdd68b64507ea/0_150_5591_3353/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/priti-patel-seeks-to-curb-refugee-claims-of-modern-slavery",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T20:00:19Z",
+        "webTitle": "Patel seeks to curb modern slavery claims as Rwanda plan labelled ‘government by gimmick’",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/priti-patel-seeks-to-curb-refugee-claims-of-modern-slavery",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/priti-patel-seeks-to-curb-refugee-claims-of-modern-slavery",
+        "fields": {
+          "headline": "Patel seeks to curb modern slavery claims as Rwanda plan labelled ‘government by gimmick’",
+          "thumbnail": "https://media.guim.co.uk/eed3f82a99ceb6c229d5257a7f549c6d6899aeeb/481_39_3019_1812/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/day-of-drama-and-despair-before-rwanda-flight-called-off",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T18:30:31Z",
+        "webTitle": "Day of drama and despair before Rwanda flight called off",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/day-of-drama-and-despair-before-rwanda-flight-called-off",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/day-of-drama-and-despair-before-rwanda-flight-called-off",
+        "fields": {
+          "headline": "Day of drama and despair before Rwanda flight called off",
+          "thumbnail": "https://media.guim.co.uk/9a212d9cb29ec54bae028262dcde0b00d1b99674/0_550_8256_4954/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/our-outrage-over-rwanda-deportation-policy-is-just-what-ministers-want",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T17:12:44Z",
+        "webTitle": "Our outrage over Rwanda deportation policy is just what ministers want | Letters",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/our-outrage-over-rwanda-deportation-policy-is-just-what-ministers-want",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/our-outrage-over-rwanda-deportation-policy-is-just-what-ministers-want",
+        "fields": {
+          "headline": "Our outrage over Rwanda deportation policy is just what ministers want",
+          "thumbnail": "https://media.guim.co.uk/ed3dc06c2b4ff7e53f8be6f3f0e1bd82059d72a8/9_63_2014_1208/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/at-republic-we-campaign-for-real-reform-not-an-elected-monarch-in-all-but-name",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T17:11:12Z",
+        "webTitle": "At Republic, we campaign for real reform, not an elected monarch in all but name | Letter",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/at-republic-we-campaign-for-real-reform-not-an-elected-monarch-in-all-but-name",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/at-republic-we-campaign-for-real-reform-not-an-elected-monarch-in-all-but-name",
+        "fields": {
+          "headline": "At Republic, we campaign for real reform, not an elected monarch in all but name",
+          "thumbnail": "https://media.guim.co.uk/e239c0a32de0fddedc1519dd34667fc24540ee0a/106_71_5207_3124/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/britains-rail-strikes-which-trains-will-be-running-where-and-when",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T17:06:17Z",
+        "webTitle": "Britain’s rail strikes: which trains will be running where and when?",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/britains-rail-strikes-which-trains-will-be-running-where-and-when",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/britains-rail-strikes-which-trains-will-be-running-where-and-when",
+        "fields": {
+          "headline": "Britain’s rail strikes: which trains will be running where and when?",
+          "thumbnail": "https://media.guim.co.uk/8ada59a61e5290a83c556ffe0b0095aec4482f5a/0_0_3976_2388/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/eighteenth-century-cockroach-found-in-slave-trading-ships-accounts",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T17:05:37Z",
+        "webTitle": "Eighteenth-century cockroach found in slave-trading ship ledger",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/eighteenth-century-cockroach-found-in-slave-trading-ships-accounts",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/eighteenth-century-cockroach-found-in-slave-trading-ships-accounts",
+        "fields": {
+          "headline": "Eighteenth-century cockroach found in slave-trading ship ledger",
+          "thumbnail": "https://media.guim.co.uk/04a5a03434b4f2314243e9d255dea55d4ac47031/0_224_3000_1800/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/northern-ireland-protocol-what-is-the-uk-and-the-eus-standoff-about",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T16:29:14Z",
+        "webTitle": "Northern Ireland protocol: what is the UK and EU’s standoff about?",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/northern-ireland-protocol-what-is-the-uk-and-the-eus-standoff-about",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/northern-ireland-protocol-what-is-the-uk-and-the-eus-standoff-about",
+        "fields": {
+          "headline": "Northern Ireland protocol: what is the UK and EU’s standoff about?",
+          "thumbnail": "https://media.guim.co.uk/ba707ebc478e2ef9b9b23ea371d7cceb8e5b65af/303_0_3660_2197/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/labour-accuses-priti-patel-of-shambles-over-cancelled-rwanda-flight",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T15:57:13Z",
+        "webTitle": "Labour accuses Priti Patel of ‘shambles’ over cancelled Rwanda flight",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/labour-accuses-priti-patel-of-shambles-over-cancelled-rwanda-flight",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/labour-accuses-priti-patel-of-shambles-over-cancelled-rwanda-flight",
+        "fields": {
+          "headline": "Labour accuses Priti Patel of ‘shambles’ over cancelled Rwanda flight",
+          "thumbnail": "https://media.guim.co.uk/9e8755191e17f4179d80bd86d94ec45ae7396250/0_0_4000_2400/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      },
+      {
+        "id": "uk-news/2022/jun/15/thames-valley-police-apologises-for-mans-heroin-death-in-custody",
+        "type": "article",
+        "sectionId": "uk-news",
+        "sectionName": "UK news",
+        "webPublicationDate": "2022-06-15T14:47:52Z",
+        "webTitle": "Thames Valley police apologise for man’s heroin death in custody",
+        "webUrl": "https://www.theguardian.com/uk-news/2022/jun/15/thames-valley-police-apologises-for-mans-heroin-death-in-custody",
+        "apiUrl": "https://content.guardianapis.com/uk-news/2022/jun/15/thames-valley-police-apologises-for-mans-heroin-death-in-custody",
+        "fields": {
+          "headline": "Thames Valley police apologise for man’s heroin death in custody",
+          "thumbnail": "https://media.guim.co.uk/5e225a04025501e05394e03fc178ff32d73a630c/38_421_1941_1163/500.jpg"
+        },
+        "isHosted": false,
+        "pillarId": "pillar/news",
+        "pillarName": "News"
+      }
+    ]
+  }
+}
