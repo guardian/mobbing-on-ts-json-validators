@@ -1,5 +1,40 @@
 import './style.css';
 
+import {
+	array,
+	assert,
+	boolean,
+	is,
+	number,
+	object,
+	string,
+	type,
+} from 'superstruct';
+
+const CapiItemType = object({
+	id: string(),
+	type: string(),
+	sectionId: string(),
+	sectionName: string(),
+	webPublicationDate: string(), // TODO use `Date` to be more type-safe
+	webTitle: string(),
+	webUrl: string(), // TODO use `URL` to be more type-safe
+	apiUrl: string(), // TODO use `URL` to be more type-safe
+	fields: object({
+		headline: string(),
+		thumbnail: string(), // TODO use `URL` to be more type-safe
+	}),
+	isHosted: boolean(),
+	pillarId: string(),
+	pillarName: string(),
+});
+
+const CapiResponseType = type({
+	response: type({
+		results: array(CapiItemType),
+	}),
+});
+
 interface CapiItem {
 	id: string;
 	type: string;
@@ -24,9 +59,18 @@ interface CapiResponse {
 	};
 }
 
+function logCapiResponse(data: CapiResponse) {
+	console.log(data);
+}
+
 function jsonToCapiResponse(json: unknown): CapiResponse {
-	// TODO add JSON validation here
-	return json as CapiResponse;
+	// TODO add assert(data, Article)JSON validation here
+	if (is(json, CapiResponseType)) {
+		logCapiResponse(json);
+	}
+
+	assert(json, CapiResponseType);
+	return json;
 }
 
 function updateDOM(element: HTMLDivElement, capiItems: CapiItem[]) {
