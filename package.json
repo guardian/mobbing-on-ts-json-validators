@@ -16,5 +16,8 @@
   "eslintConfig": {
     "extends": "@guardian/eslint-config-typescript"
   },
-  "prettier": "@guardian/prettier"
+  "prettier": "@guardian/prettier",
+  "dependencies": {
+    "io-ts": "^2.2.16"
+  }
 }
