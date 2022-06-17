@@ -1,6 +1,10 @@
+import { isRight } from 'fp-ts/lib/Either';
+import type { Validation } from 'io-ts';
+import type { CapiItem } from './schema';
+import { CapiResponseCodec } from './schema';
 import './style.css';
 
-interface CapiItem {
+interface CapiItemOld {
 	id: string;
 	type: string;
 	sectionId: string;
@@ -20,16 +24,18 @@ interface CapiItem {
 
 interface CapiResponse {
 	response: {
-		results: CapiItem[];
+		results: CapiItemOld[];
 	};
 }
 
-function jsonToCapiResponse(json: unknown): CapiResponse {
+function jsonToCapiResponse(json: unknown): Validation<CapiResponse> {
 	// TODO add JSON validation here
-	return json as CapiResponse;
+
+	return CapiResponseCodec.decode(json);
 }
 
-function updateDOM(element: HTMLDivElement, capiItems: CapiItem[]) {
+function updateDOM(element: HTMLDivElement | null, capiItems: CapiItem[]) {
+	if (!element) return;
 	element.innerHTML = `
 	<ul>
 		${capiItems
@@ -44,10 +50,16 @@ function updateDOM(element: HTMLDivElement, capiItems: CapiItem[]) {
 
 const goodResponse: unknown = await import('./good.json');
 const goodResults = jsonToCapiResponse(goodResponse);
-const $good = document.querySelector<HTMLDivElement>('#good')!;
-updateDOM($good, goodResults.response.results);
+const $good = document.querySelector<HTMLDivElement>('#good');
+if (isRight(goodResults)) {
+	updateDOM($good, goodResults.right.response.results);
+} else {
+	console.warn(goodResponse);
+}
 
 const badResponse: unknown = await import('./bad.json');
 const badResults = jsonToCapiResponse(badResponse);
-const $bad = document.querySelector<HTMLDivElement>('#bad')!;
-updateDOM($bad, badResults.response.results);
+const $bad = document.querySelector<HTMLDivElement>('#bad');
+if (isRight(badResults)) {
+	updateDOM($bad, badResults.right.response.results);
+}
