@@ -1,35 +1,17 @@
+import type { SafeParseReturnType } from 'zod';
+import type { CapiItem, CapiResponse } from './schema';
+import { capiResponse } from './schema';
 import './style.css';
 
-interface CapiItem {
-	id: string;
-	type: string;
-	sectionId: string;
-	sectionName: string;
-	webPublicationDate: string; // TODO use `Date` to be more type-safe
-	webTitle: string;
-	webUrl: string; // TODO use `URL` to be more type-safe
-	apiUrl: string; // TODO use `URL` to be more type-safe
-	fields: {
-		headline: string;
-		thumbnail: string; // TODO use `URL` to be more type-safe
-	};
-	isHosted: boolean;
-	pillarId: string;
-	pillarName: string;
+function jsonToCapiResponse(
+	json: unknown,
+): SafeParseReturnType<unknown, CapiResponse> {
+	return capiResponse.safeParse(json);
 }
 
-interface CapiResponse {
-	response: {
-		results: CapiItem[];
-	};
-}
+function updateDOM(element: HTMLDivElement | null, capiItems: CapiItem[]) {
+	if (!element) return;
 
-function jsonToCapiResponse(json: unknown): CapiResponse {
-	// TODO add JSON validation here
-	return json as CapiResponse;
-}
-
-function updateDOM(element: HTMLDivElement, capiItems: CapiItem[]) {
 	element.innerHTML = `
 	<ul>
 		${capiItems
@@ -44,10 +26,18 @@ function updateDOM(element: HTMLDivElement, capiItems: CapiItem[]) {
 
 const goodResponse: unknown = await import('./good.json');
 const goodResults = jsonToCapiResponse(goodResponse);
-const $good = document.querySelector<HTMLDivElement>('#good')!;
-updateDOM($good, goodResults.response.results);
+const $good = document.querySelector<HTMLDivElement>('#good');
+if (goodResults.success) {
+	updateDOM($good, goodResults.data.response.results);
+} else {
+	console.warn(goodResults.error);
+}
 
 const badResponse: unknown = await import('./bad.json');
 const badResults = jsonToCapiResponse(badResponse);
-const $bad = document.querySelector<HTMLDivElement>('#bad')!;
-updateDOM($bad, badResults.response.results);
+const $bad = document.querySelector<HTMLDivElement>('#bad');
+if (badResults.success) {
+	updateDOM($bad, badResults.data.response.results);
+} else {
+	console.warn(badResults.error);
+}
