@@ -10,9 +10,16 @@
   },
   "devDependencies": {
     "@guardian/eslint-config-typescript": "10.0.0",
+    "@guardian/libs": "16.1.2",
     "@guardian/prettier": "8.0.0",
     "@guardian/tsconfig": "0.3.0",
+    "ajv": "8.13.0",
+    "arktype": "2.0.0-dev.11",
+    "io-ts": "2.2.21",
+    "superstruct": "1.0.4",
     "typescript": "5.3.3",
+    "typia": "6.0.3",
+    "valibot": "0.30.0",
     "vite": "5.2.11"
   },
   "eslintConfig": {
