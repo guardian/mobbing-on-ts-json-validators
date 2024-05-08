@@ -11,7 +11,7 @@ function updateDOM(element: HTMLDivElement, capiItems: MaybeItem[] = []) {
 					return `<li class="error">${item.name}: ${item.message}</li>`;
 				}
 				const { webTitle, webUrl } = item;
-				return `<li><a class="gu" href="${webUrl.href}" title="${webTitle}">${webTitle}</a></li>`;
+				return `<li><a href="${webUrl.href}" title="${webTitle}">${webTitle}</a></li>`;
 			})
 			.join('')}
 	</ul>
