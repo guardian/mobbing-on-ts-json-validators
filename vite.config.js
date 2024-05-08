@@ -3,15 +3,17 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 
-const path = dirname(fileURLToPath(import.meta.url), '..');
+const path = dirname(fileURLToPath(import.meta.url));
 
 const libraries = await readdir(path, {
 	withFileTypes: true,
 })
 	.then((entries) =>
 		entries.flatMap((entry) =>
-			entry.isDirectory && entry.name.startsWith('with-')
-				? [[entry.name, `${entry.path}/${entry.name}/index.html`]]
+			entry.isDirectory() && entry.name.startsWith('with-')
+				? /** @type {const} */ ([
+						[entry.name, `${entry.path}/${entry.name}/index.html`],
+					])
 				: [],
 		),
 	)
