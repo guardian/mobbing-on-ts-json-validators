@@ -1,14 +1,14 @@
 {
-  "extends": "@guardian/tsconfig",
-  "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "noEmit": true,
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true
-  }
+	"extends": "@guardian/tsconfig",
+	"compilerOptions": {
+		"allowImportingTsExtensions": true,
+		"isolatedModules": true,
+		"lib": ["ESNext", "DOM"],
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"verbatimModuleSyntax": true
+	}
 }
