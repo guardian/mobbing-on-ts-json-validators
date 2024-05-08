@@ -1,4 +1,6 @@
+import badResponse from './bad.json';
 import type { CapiItem } from './capi.ts';
+import goodResponse from './good.json';
 
 function updateDOM(
 	element: HTMLDivElement,
@@ -18,9 +20,6 @@ function updateDOM(
 	</ul>
 	`;
 }
-const goodResponse: unknown = await import('./good.json');
-const badResponse: unknown = await import('./bad.json');
-
 const $good = document.querySelector<HTMLDivElement>('#good');
 const $bad = document.querySelector<HTMLDivElement>('#bad');
 
