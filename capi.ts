@@ -22,7 +22,7 @@ export type RawCapiResponse = {
 	};
 };
 
-type CapiItem = {
+export type CapiItem = {
 	id: string;
 	type: string;
 	sectionId: string;
@@ -38,10 +38,4 @@ type CapiItem = {
 	isHosted: boolean;
 	pillarId: string;
 	pillarName: string;
-};
-
-export type CapiResponse = {
-	response: {
-		results: CapiItem[];
-	};
 };

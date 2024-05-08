@@ -1,8 +1,9 @@
-import type { CapiResponse } from './capi.ts';
+import type { CapiItem } from './capi.ts';
 
-type MaybeItem = CapiResponse['response']['results'][number] | Error;
-
-function updateDOM(element: HTMLDivElement, capiItems: MaybeItem[] = []) {
+function updateDOM(
+	element: HTMLDivElement,
+	capiItems: Array<CapiItem | Error> = [],
+) {
 	element.innerHTML = `
 	<ul>
 		${capiItems
@@ -23,7 +24,7 @@ const badResponse: unknown = await import('./bad.json');
 const $good = document.querySelector<HTMLDivElement>('#good');
 const $bad = document.querySelector<HTMLDivElement>('#bad');
 
-export function init(parser: (data: unknown) => MaybeItem[]) {
+export function init(parser: (data: unknown) => Array<CapiItem | Error>) {
 	if (!$good || !$bad) {
 		console.error('missing #good or #bad div');
 		return; // we cannot update the DOM adequately
