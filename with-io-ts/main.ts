@@ -1,14 +1,14 @@
 import { either } from 'fp-ts';
 import { isRight } from 'fp-ts/lib/Either.js';
 import {
-	failure,
-	success,
-	string,
-	boolean,
 	array,
+	boolean,
+	failure,
+	string,
+	success,
 	Type,
-	type TypeOf,
 	type,
+	type TypeOf,
 } from 'io-ts';
 import { init } from '../init.ts';
 
