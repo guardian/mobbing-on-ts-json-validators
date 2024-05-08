@@ -13,6 +13,7 @@
     "@guardian/libs": "16.1.2",
     "@guardian/prettier": "8.0.0",
     "@guardian/tsconfig": "0.3.0",
+    "@typeschema/main": "0.13.9",
     "ajv": "8.13.0",
     "arktype": "2.0.0-dev.11",
     "fp-ts": "2.16.5",

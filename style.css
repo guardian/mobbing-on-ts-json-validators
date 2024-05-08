@@ -4,6 +4,11 @@ body {
   font-family: system-ui, sans-serif;
 }
 
+li.error {
+    color: darkred;
+    max-width: 66ch;
+}
+
 a.gu[title="undefined"],
 a.gu:not([href^="https://www.theguardian.com/"]) {
   color: red;

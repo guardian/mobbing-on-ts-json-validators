@@ -1,5 +1,4 @@
-import { either } from 'fp-ts';
-import { isRight } from 'fp-ts/lib/Either.js';
+import { either, isLeft } from 'fp-ts/lib/Either.js';
 import {
 	array,
 	boolean,
@@ -8,7 +7,7 @@ import {
 	success,
 	Type,
 	type,
-	type TypeOf,
+	// type TypeOf,
 } from 'io-ts';
 import { init } from '../init.ts';
 
@@ -52,7 +51,7 @@ const CapiItemCodec = type({
 	pillarName: string,
 });
 
-type CapiItem = TypeOf<typeof CapiItemCodec>;
+// type CapiItem = TypeOf<typeof CapiItemCodec>;
 
 const CapiResponseCodec = type({
 	response: type({
@@ -62,13 +61,18 @@ const CapiResponseCodec = type({
 
 init((data) => {
 	const result = CapiResponseCodec.decode(data);
-	if (isRight(result)) {
-		return result.right;
+	if (isLeft(result)) {
+		return result.left.map(({ message, value, context }) =>
+			Error(
+				[
+					message,
+					value,
+					context.flatMap(({ key }) => key).join(' &rarr; '),
+				].join('\n'),
+			),
+		);
 	}
-	return undefined;
+	return result.right.response.results;
 });
 
-type CapiResponse = TypeOf<typeof CapiResponseCodec>;
-
-export { CapiItemCodec, CapiResponseCodec };
-export type { CapiItem, CapiResponse };
+// type CapiResponse = TypeOf<typeof CapiResponseCodec>;

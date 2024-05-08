@@ -39,7 +39,13 @@ const capiResponse = object({
 	}),
 });
 
-export type CapiItem = z.infer<typeof capiItem>;
-export type CapiResponse = z.infer<typeof capiResponse>;
+// export type CapiItem = z.infer<typeof capiItem>;
+// export type CapiResponse = z.infer<typeof capiResponse>;
 
-init((data) => capiResponse.parse(data));
+init((data) => {
+	const result = capiResponse.safeParse(data);
+	if (!result.success) {
+		return [result.error];
+	}
+	return result.data.response.results;
+});
