@@ -1,6 +1,6 @@
 import type { z } from 'zod';
 import { array, boolean, date, object, preprocess, string } from 'zod';
-import { init } from './main';
+import { init } from '../init.ts';
 
 const dateSchema = preprocess((arg) => {
 	if (typeof arg === 'string' || arg instanceof Date) {

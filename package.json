@@ -1,6 +1,7 @@
 {
   "name": "@guardian/mobbing-on-ts-json-validators",
   "private": true,
+  "type": "module",
   "scripts": {
     "check": "tsc",
     "dev": "vite",

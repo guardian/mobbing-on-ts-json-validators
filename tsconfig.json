@@ -2,11 +2,13 @@
   "extends": "@guardian/tsconfig",
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
-    "moduleResolution": "bundler",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "verbatimModuleSyntax": true,
     "skipLibCheck": true
-  },
-  "include": ["src"]
+  }
 }

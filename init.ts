@@ -1,5 +1,4 @@
-import type { CapiResponse } from './capi';
-import './style.css';
+import type { CapiResponse } from './capi.ts';
 
 function updateDOM(
 	element: HTMLDivElement,
@@ -10,7 +9,7 @@ function updateDOM(
 		${capiItems
 			.map(
 				({ webUrl, webTitle }) =>
-					`<li><a href="${webUrl.toString()}" title="${webTitle}">${webTitle}</a></li>`,
+					`<li><a class="gu" href="${webUrl.toString()}" title="${webTitle}">${webTitle}</a></li>`,
 			)
 			.join('')}
 	</ul>

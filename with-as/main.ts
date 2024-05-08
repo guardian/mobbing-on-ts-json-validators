@@ -1,5 +1,5 @@
-import type { CapiResponse } from './capi';
-import { init } from './main';
+import type { CapiResponse } from '../capi.ts';
+import { init } from '../init.ts';
 
 function jsonToCapiResponse(json: unknown): CapiResponse {
 	// TODO add JSON validation here
