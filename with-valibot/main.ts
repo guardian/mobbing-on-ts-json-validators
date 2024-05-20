@@ -3,6 +3,7 @@ import {
 	boolean,
 	isoTimestamp,
 	object,
+	type Output,
 	safeParse,
 	string,
 	transform,
@@ -39,8 +40,8 @@ const capiResponse = object({
 	}),
 });
 
-// export type CapiItem = z.infer<typeof capiItem>;
-// export type CapiResponse = z.infer<typeof capiResponse>;
+export type CapiItem = Output<typeof capiItem>;
+export type CapiResponse = Output<typeof capiResponse>;
 
 init((data) => {
 	const result = safeParse(capiResponse, data);
